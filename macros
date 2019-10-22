@@ -1,0 +1,34 @@
+Hello Plunker!
+Sub уно()
+' ' уно Макрос
+' ' Сочетание клавиш: Ctrl+й
+Сначала мы называем макрос, потом даем емму сочетание клавиш, чтобы быстро вызывать макрос. Потом идет сама команда - в активную ячейку копируй код из данной ячейки.
+' If Worksheets(ActiveSheet.Name).Name = "Лист1" Then ActiveCell.FormulaR1C1 = "привет"
+End If
+В этой команде сказано, что если имя листа - Лист1, то выполняй следующую команду.
+End Sub
+Sub Макрос2()
+' ' Макрос2 Макрос
+' ' Сочетание клавиш: Ctrl+а
+' Cells.Replace What:="привет", Replacement:="прифет",
+LookAt:=xlPart, _
+SearchOrder:=xlByRows, MatchCase:=False,
+SearchFormat:=False, _
+ReplaceFormat:=False
+Сначала опять называем макрос и даем ему сочетание клавиш. После этого даем команду найти одно слово и заменить его другим. если первое слово не то, команда не будет выполняться.
+End Sub
+Sub Макрос3()
+' ' Макрос3 Макрос
+' ' Сочетание клавиш: Ctrl+е
+' Range("A3:L16").Select
+Application.Run "Книга1!Макрос2"
+Application.Run "Книга1!Макрос2"
+Application.Run "Книга1!Макрос2"
+Application.Run "Книга1!Макрос2"
+Application.Run "Книга1!Макрос2"
+Selection.Replace What:="прифет",
+Replacement:="прифет", LookAt:=xlPart, _
+SearchOrder:=xlByRows, MatchCase:=False,
+SearchFormat:=False, _
+ReplaceFormat:=True
+End Sub
