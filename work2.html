@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Стили</title>
+
+function er() {
+var a = Number(document.getElementById("var_in").value);
+var b = a;
+a = a * a;
+a = a * a;
+document.getElementById("inf1").textContent = "a^3 a^10=" + a;
+a = b;
+a = a * a * a;
+a = a * a;
+document.getElementById("inf2").textContent = "a^4 a^20=" + a;
+a = b;
+a = a * a * a;
+a = a * a * b;
+document.getElementById("inf3").textContent = "a^5 a^13=" + a;
+a = b;
+
+
+
+
+}
+</script>
+</head>
+
+<body>
+<div class="need_left">
+<div class="neon">
+<span class="text" data-text="" id="inf1"></span>
+<span class="gradient"></span>
+<span class="spotlight"></span>
+</div>
+</div>
+<div class="need_left1">
+<div class="neon">
+<span class="text" data-text="" id="inf2"></span>
+<span class="gradient"></span>
+<span class="spotlight"></span>
+</div>
+</div>
+<div class="need_left2">
+<div class="neon">
+<span class="text" data-text="" id="inf3"></span>
+<span class="gradient"></span>
+<span class="spotlight"></span>
+</div>
+</div>
+<div class="need_left3">
+<div class="neon">
+<span class="text" data-text="" id="inf4"></span>
+<span class="gradient"></span>
+<span class="spotlight"></span>
+</div>
+</div>
+
+<button onclick="er()">1.62</button>
+<input type="text" value="" id="var_in">
+</body>
+
+</html>
