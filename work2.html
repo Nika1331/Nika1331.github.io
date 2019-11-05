@@ -1,150 +1,55 @@
 <html>
-
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="Content-Type"
+content="text/html; charset=windows-1251">
 <title>Стили</title>
-<style>
-@font-face {
-font-family: "Gothic";
-src: url(https://berdges86.github.io/Kelly_Ann_Gothic.TTF);
-}
-
-body {
-display: inline-block;
-flex-wrap: wrap;
-background-color: black;
-align-content: space-between;
-overflow: hidden;
-}
-
-.need_left {
-position: fixed;
-top: 20;
-}
-
-.need_left1 {
-position: fixed;
-top: 100;
-}
-
-.need_left2 {
-position: fixed;
-top: 180;
-}
-
-.need_left3 {
-position: fixed;
-top: 260;
-}
-
-.neon {
-top: 30;
-position: relative;
-overflow: hidden;
-filter: brightness(200%);
-}
-
-.text {
-font-family: "Gothic";
-background-color: black;
-color: white;
-font-size: 40px;
-font-weight: lighter;
-user-select: none;
-}
-
-.text::before {
-content: attr(data-text);
-position: absolute;
-color: white;
-filter: blur(0.02em);
-mix-blend-mode: difference;
-}
-
-.gradient {
-position: absolute;
-background: linear-gradient(45deg, red, gold, lightgreen, gold, red);
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-mix-blend-mode: multiply;
-}
-
-.spotlight {
-position: absolute;
-top: -100%;
-left: -100%;
-right: 0;
-bottom: 0;
-background: radial-gradient( circle, white, transparent 25%) center / 25% 25%, radial-gradient( circle, white, black 25%) center / 12.5% 12.5%;
-animation: light 5s linear infinite;
-mix-blend-mode: color-dodge;
-}
-
-@keyframes light {
-to {
-transform: translate(50%, 50%);
-}
-}
+<style> p {background-color: #fff;
+        margin: 20px auto;
+        font-family: Arial;
+        font-size: 2em; 
+        text-transform: uppercase;
+        color: rgba(0,168,255,0.5);
+        text-shadow: 8px 8px 0 rgba(255,0,180,0.5);}
 </style>
 <script>
-function er() {
-var a = Number(document.getElementById("var_in").value);
+function er(){
+var a =Number(document.getElementById("var_in").value);
 var b = a;
-a = a * a;
-a = a * a;
-document.getElementById("inf1").textContent = "a^3 a^10=" + a;
-a = b;
-a = a * a * a;
-a = a * a;
-document.getElementById("inf2").textContent = "a^4 a^20=" + a;
-a = b;
-a = a * a * a;
-a = a * a * b;
-document.getElementById("inf3").textContent = "a^5 a^13=" + a;
-a = b;
+a=a*a;
+c=a*b;
+a=a*c;
+a=a*a;
+document.getElementById("inf1").innerHTML ="<p>"+"a^3="= " a^10="+a+"</p>" ;
+b=a;
+c=a*a*a*a;
+a=a*b;
+a=a*c
+document.getElementById("inf2").innerHTML ="<p>"+"a^4="+a+ " a^20="+a+"</p>" ;
+b=a;
+a=a*a*a*a;
+b=a*b;
+a=a*b;
+document.getElementById("inf3").innerHTML ="<p>"+"a^5 a^13="+a+"</p>";
 
-
-
-
+document.getElementById("inf4").innerHTML ="<p>"+"a^5 a^19="+a+"</p>";
+document.getElementById("inf5").innerHTML ="<p>"+"a^2 a^5 a^17="+a+"</p>";
+document.getElementById("inf6").innerHTML ="<p>"+"a^4 a^12 a^28="+a+"</p>";
 }
 </script>
 </head>
-
 <body>
-<div class="need_left">
-<div class="neon">
-<span class="text" data-text="" id="inf1"></span>
-<span class="gradient"></span>
-<span class="spotlight"></span>
-</div>
-</div>
-<div class="need_left1">
-<div class="neon">
-<span class="text" data-text="" id="inf2"></span>
-<span class="gradient"></span>
-<span class="spotlight"></span>
-</div>
-</div>
-<div class="need_left2">
-<div class="neon">
-<span class="text" data-text="" id="inf3"></span>
-<span class="gradient"></span>
-<span class="spotlight"></span>
-</div>
-</div>
-<div class="need_left3">
-<div class="neon">
-<span class="text" data-text="" id="inf4"></span>
-<span class="gradient"></span>
-<span class="spotlight"></span>
-</div>
-</div>
-
 <button onclick="er()">1.62</button>
-<input type="text" value="" id="var_in">
+<br>
+<br>
+a=)<input type="text" value="2" id="var_in">
+<br>
+<br>
+
+<div id="inf1"></div>
+<div id="inf2"></div>
+<div id="inf3"></div>
+<div id="inf4"></div>
+<div id="inf5"></div>
+<div id="inf6"></div>
 </body>
-
 </html>
-
